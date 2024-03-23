@@ -1,4 +1,4 @@
-# calendar_projects
+# Flutter Calendar
 
 A new Flutter project.
 
