@@ -4,6 +4,7 @@ import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class calendarHeader extends StatelessWidget implements PreferredSizeWidget {
   final List<String> size;
+  // final ValueChanged<String> onSelectedSize;
 
   calendarHeader({required this.size});
 
@@ -15,7 +16,7 @@ class calendarHeader extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       actions: <Widget>[
         PopupMenuButton<String>(
-          icon: Icon(Icons.settings),
+          icon: Icon(Icons.settings_applications),
           itemBuilder: (BuildContext context) {
             return size.map((String choice) {
               return PopupMenuItem<String>(
@@ -23,9 +24,15 @@ class calendarHeader extends StatelessWidget implements PreferredSizeWidget {
                 child: Text('$choice',),
               );
             }).toList();
-          },
+            },
+            // onSelected: onSelectedSize
         ),
       ],
     );
   }
+
+  // String selectedSize() {
+  //   return onSelectedSize;
+  // }
+
 }

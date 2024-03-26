@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 // Import pages
-import 'package:calendar_projects/calendar/calendar_home.dart';
+import 'package:calendar_projects/calendar/widgets/calendar_home.dart';
+
+int contentSize() {
+  return 1;
+}
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +19,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print(contentSize());
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
